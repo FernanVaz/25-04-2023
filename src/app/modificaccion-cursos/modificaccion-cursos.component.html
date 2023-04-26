@@ -1,0 +1,38 @@
+<div *ngIf="ids==0; then thenBlock else elseBlock">
+</div>
+<ng-template #thenBlock>
+<label for="marca">Id: </label>
+<input type="number" name="marca" [(ngModel)]="curso.id"><br>
+<label for="color">Nombre: </label>
+<input id="string" id="color" name="color" [(ngModel)]="curso.nombre"><br>
+<label for="velocidad">Cantidad: </label>
+<input type="number" id="velocidad" name="velocidad" [(ngModel)]="curso.duracion"><br>
+<label for="platos">Tipo: </label><br>
+<select name="" id=""[(ngModel)]="curso.nivel">
+<option value="Bajo">Bajo</option>
+<option value="Medio" >Medio</option>
+<option value="Alto" >Alto</option>
+</select><br>
+
+<input type="submit" value="Alta" routerLink="" (click)="alta()">
+</ng-template>
+
+<ng-template #elseBlock>
+    <label for="marca">Id: </label>
+    <input type="number" name="marca" [(ngModel)]="curso.id"><br>
+    <label for="color">Nombre: </label>
+    <input id="string" id="color" name="color" [(ngModel)]="curso.nombre"><br>
+    <label for="velocidad">Cantidad: </label>
+    <input type="number" id="velocidad" name="velocidad" [(ngModel)]="curso.duracion"><br>
+    <label for="platos">Tipo: </label><br>
+    <select name="" id=""[(ngModel)]="curso.nivel">
+    <option value="Bajo">Bajo</option>
+    <option value="Medio" >Medio</option>
+    <option value="Alto" >Alto</option>
+    </select><br>
+
+    <input type="submit" value="subir" routerLink="" (click)="anadir()">
+
+</ng-template>
+
+
